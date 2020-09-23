@@ -11,6 +11,7 @@ public class Main {
             8000,
             6000
     );
+	companyET.setBulstat("012345678910");
         System.out.println(companyET.toString());
         System.out.println(companyET.earnings());
     }

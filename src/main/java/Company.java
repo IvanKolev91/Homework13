@@ -10,7 +10,7 @@ public class Company {
         this.bulstat = bulstat;
     }
 
-    public String getCompanyName() {
+    String getCompanyName() {
         return companyName;
     }
 
@@ -18,7 +18,7 @@ public class Company {
         this.companyName = companyName;
     }
 
-    public String getCompanyDate() {
+    String getCompanyDate() {
         return companyDate;
     }
 
@@ -26,25 +26,16 @@ public class Company {
         this.companyDate = companyDate;
     }
 
-    private String getBulstat() {
+    String getBulstat() {
         return bulstat;
     }
 
     public void setBulstat(String bulstat) {
-        checkBoundaryValue();
-        this.bulstat = bulstat;
-    }
-
-    private boolean checkBoundaryValue() {
-        if (getBulstat().length() == 10) {
-            return true;
+        if (bulstat.length() == 10) {
+            this.bulstat = bulstat;
         } else {
             System.out.println("The boundary is out of scope");
-            return false;
-
         }
     }
-
-
 }
 
